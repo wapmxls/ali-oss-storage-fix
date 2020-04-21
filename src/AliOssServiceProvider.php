@@ -37,7 +37,7 @@ class AliOssServiceProvider extends ServiceProvider
             $cdnDomain = empty($config['cdnDomain']) ? '' : $config['cdnDomain'];
             $bucket    = $config['bucket'];
             $ssl       = empty($config['ssl']) ? false : $config['ssl']; 
-            $isCname   = empty($config['isCName']) ? false : $config['isCName'];
+            $isCname   = false;
             $debug     = empty($config['debug']) ? false : $config['debug'];
 
             $endPoint  = $config['endpoint']; // 默认作为外部节点

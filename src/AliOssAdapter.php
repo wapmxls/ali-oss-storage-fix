@@ -570,7 +570,7 @@ class AliOssAdapter extends AbstractAdapter
         //if (!$this->has($path)) throw new FileNotFoundException($filePath.' not found');
         //如果oss文件不存在 可以返回网站设计风格有关联的loading图
         //再加个upload目录 因为现在oss存储在upload目录
-        return ( $this->ssl ? 'https://' : 'http://' ) . ( $this->isCname ? ( $this->cdnDomain == '' ? $this->endPoint : $this->cdnDomain ) : $this->bucket . '.' . $this->endPoint ) . '/' .ltrim($path, '/');
+        return ( $this->ssl ? 'https://' : 'http://' ) .( $this->cdnDomain == '' ? $this->endPoint : $this->cdnDomain )  . '/' .ltrim($path, '/');
     }
 
     /**
